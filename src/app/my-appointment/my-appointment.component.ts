@@ -333,9 +333,6 @@ export class MyAppointmentComponent implements OnInit {
           };
           await this.servie.dataManipulation("POST","insertDoctorBookingRecord",bookingRecord)
           }
-
-          
-          
         }
         
         //appointTable records 
