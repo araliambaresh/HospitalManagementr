@@ -13,7 +13,6 @@
             <div class="inputs">
                 <label for="Symptoms">Symptoms*</label>
                   <input type="text" placeholder="symptoms" id="Symptoms" [(ngModel)]="symptoms">
-               
             </div>
             <div class="inputs">
                 <label for="date">Date*</label>
@@ -46,7 +45,6 @@
                 </div>
                 <div class="doctor-availability" *ngIf="doctorAvailabilty===true" >
                    <ul>
-                    <!-- <div aria-disabled="true" style="color: black;">true</div> -->
                     <li   (click)="chooseBookingTime('10:30AM','value1')"  [ngClass]="chooseBookingTimingColor1?'colored':'normal'" *ngIf="chooseBookingTiming1===false">10:30AM</li>
                     <li (click)="chooseBookingTime('11:30AM','value2')" [ngClass]="chooseBookingTimingColor2?'colored':'normal'"    *ngIf="chooseBookingTiming2===false">11:30AM</li>
                     <li (click)="chooseBookingTime('12:30PM','value3')" [ngClass]="chooseBookingTimingColor3?'colored':'normal'"    *ngIf="chooseBookingTiming3===false">12:30PM</li>
@@ -61,8 +59,6 @@
                     <h2>No schedule found for the above selected date</h2>
                    </div>
                 </div>
-
-
             </div>
             <div class="inputs">
                 <button type="submit" (click)="bookAppointment()">Submit</button>
