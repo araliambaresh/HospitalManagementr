@@ -1,0 +1,26 @@
+<div class="doctor-heading">
+    <h1> Hospital  appointment-list</h1>
+</div>
+<div>
+    <app-admin-panel></app-admin-panel>
+</div>
+    <table  id="table" > 
+       <tr >
+           <th>Sl no</th>
+           <th>Id</th>
+           <th>Patient Name</th>
+           <th>mobileNumber</th>
+           <th>address</th>
+           <th>age</th>
+           <th>city</th>
+       </tr>
+            <tr class="table-row" *ngFor="let emergency of emergencies; index as i">
+                <td>{{i+1}}</td>
+                <td>{{emergency.emergencyId}}</td>
+                <td>{{emergency.name}}</td>
+                <td>{{emergency.mobileNumber}}</td>
+                <td>{{emergency.address}}</td>
+                <td>{{emergency.age}}</td>
+                <td>{{emergency.city}}</td>
+                </tr>
+   </table>

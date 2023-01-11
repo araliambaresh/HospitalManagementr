@@ -1,0 +1,50 @@
+.doctor-heading{
+    background-color: rgb(185, 185, 248);
+    border-bottom: solid palevioletred 3px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    }
+#table{
+    width: 60vw;
+    height: auto;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    font-weight: bolder;
+    position: absolute;
+    left: 25%;
+    top: 25%;
+   
+    box-shadow: 10px 10px 10px black;
+}
+
+th{
+    color: blue;
+    background-color: antiquewhite;
+    height: 40px;
+
+    border-radius: 10px;
+    border: 2px solid violet;
+}
+
+td{
+    background-color: rgb(164, 182, 182);
+    color:black;
+    align-items: center;
+    padding: 10px 5px;
+    border-radius: 10px;
+    
+}
+td button{
+ font-size: large;
+ background-color: blue;
+ color: wheat;
+}
+td button:hover{
+    background-color: green;
+}
+th:hover,td:hover{
+    box-shadow: 5px 5px 5px blueviolet;
+}
+

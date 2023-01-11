@@ -1,0 +1,141 @@
+.doctor-heading{
+    background-color: rgb(185, 185, 248);
+    border-bottom: solid palevioletred 3px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    }
+#table{
+    width: 60vw;
+    height: auto;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    font-weight: bolder;
+    position: absolute;
+    left: 25%;
+    top: 25%;
+   
+    box-shadow: 10px 10px 10px black;
+}
+
+th{
+    color: blue;
+    background-color: antiquewhite;
+    height: 40px;
+
+    border-radius: 10px;
+    border: 2px solid violet;
+}
+
+td{
+    background-color: rgb(164, 182, 182);
+    color:black;
+    align-items: center;
+    padding: 10px 5px;
+    border-radius: 10px;
+    
+}
+td button{
+ font-size: large;
+ background-color: blue;
+ color: wheat;
+}
+td button:hover{
+    background-color: green;
+}
+th:hover,td:hover{
+    box-shadow: 5px 5px 5px blueviolet;
+}
+
+
+#form1{
+  
+    display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-gap: 40px;
+   height: auto;
+   
+    font-size: larger;
+    font-weight: bolder;
+    padding: 10px;
+    color:black;
+    border-radius: 10px;
+  
+  
+    justify-content: center;
+    
+}
+.update-table{
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-gap: 40px;
+   width: 80vw; 
+   height: 60vh;
+   position:fixed;
+    top: 20%;
+    left: 10%; 
+    z-index: 10;
+    background-color:rgb(223, 223, 224);
+    box-shadow: 10px 10px 10px rgb(226, 167, 167);
+}
+#form1 input,select,button{
+margin-left:20px ;
+height: 25px;
+border-radius:5px ;
+font-size: large;
+}
+#form1 button:hover{
+    background-color: blue;
+    color: white;
+}
+
+#heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    border-bottom: 3px solid rebeccapurple;
+  }
+  .new-appointment-data{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: larger;
+  }
+  .new-appointment-data input,.new-appointment-data select,.new-appointment-data label{
+    width: 50%;
+    border: none;
+   
+  }
+  .new-appointment-data input,select{
+    border-bottom: 3px solid royalblue;
+    height: 40px;
+  }
+
+  .new-appointment-data input:focus{
+    outline:none;
+  }
+
+  #update-btn{
+width: 100%;
+height: 40px;
+  }
+  .show-appointment h1{
+    margin: 0%;
+    color: white;
+  }
+  .show-appointment{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin-top: 70px;
+    justify-content: baseline;
+    background-color: rgb(218, 196, 238);
+
+  }
+  .show-patient button{
+    height: 50px;
+    background-color: rgb(255, 93, 93);
+    color: white;
+  }

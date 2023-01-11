@@ -1,0 +1,49 @@
+
+<div>
+    <div class="form-emergency">
+        <div class="inputs form-name">
+            <h2>Registration Form</h2>
+        </div>
+            <div class="inputs">
+                <label for="fname">Full Name*</label>
+                <input type="text" placeholder="full name" [(ngModel)]="name" id="fname">
+            </div>
+            <div class="inputs">
+                <label for="age">Age*</label>
+                <input type="number" placeholder="Age" [(ngModel)]="age"  id="Age">
+            </div>
+            <div class="inputs">
+                <label for="email">Email*</label>
+                <input type="email" placeholder="email" [(ngModel)]="email"  id="email">
+            </div>
+            <div class="inputs">
+                <label for="num">Mobile Number*</label>
+                <input type="number" placeholder="mobile number" [(ngModel)]="mobile" id="num">
+            </div>
+            <div class="inputs">
+                <label for="dob">DOB*</label>
+                <input type="date" placeholder="date" [(ngModel)]="dateOfBirth" id="dob">
+            </div>
+            <div class="inputs">
+                <div class="Gender">Gender*</div>
+                <div class="gender-details">
+
+                    <label for="male">Male</label>
+                    <input type="radio"  [(ngModel)]="gender" value="male" id="male" name="gender">
+                    <label for="female">Female</label>
+                    <input type="radio"   [(ngModel)]="gender" value="female" name="gender" id="female">
+                </div>
+            </div>
+            <div class="inputs">
+                <label for="password">Password*</label>
+                <input type="password" placeholder="password" [(ngModel)]="password" id="password">
+            </div>
+            <div class="inputs">
+                <label for="confirmPassword">Confirm password*</label>
+                <input type="password" placeholder="password"  [(ngModel)]="confirmPassword" id="confirmPassword">
+            </div>
+            <div class="inputs">
+                <button type="submit" (click)="signup()">Submit</button>
+            </div>
+    </div>
+</div>

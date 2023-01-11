@@ -1,0 +1,29 @@
+
+
+  
+        
+<section id="sidebar">
+    <div class="sidebar-brand">
+        <img src="../../../assets/images/profile.png" alt="">
+        <h2>Welcome {{adminUser.name}} </h2>
+    </div>
+    <div class="sidebar-menu">
+        <ul>
+            <li><a routerLink="/adminPortal"> DashBoard </a></li>
+            <li><a routerLink="/doctorList"> Doctors-list</a></li>
+            
+            <li><a routerLink="/adminAppointment">Total-appointment </a></li>
+            <li><a routerLink="/emergencyDetails">Emergency-list </a></li>  
+            <li><a (click)="showLogout()">Logout</a></li>
+        </ul>
+    </div>
+</section>
+
+<div class="logout" *ngIf="toggleLogout">
+    <h1>Are you sure that you want to Logout...?</h1>
+    <div class="button">
+        <button id="btn1" (click)="logout()"> Logout</button>
+        <button id="btn2" (click)="cancel()"> Cancel</button>
+    </div>
+</div>
+

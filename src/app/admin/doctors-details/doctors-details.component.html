@@ -1,0 +1,111 @@
+<div class="doctor-heading">
+    <h1>Currently Working  Docotors-list</h1>
+</div>
+
+<div>
+    <app-admin-panel></app-admin-panel>
+</div>
+<div class="doctor-list">
+<div class="show-doctor">
+    <h1>Add New doctors</h1><button  (click)="showNewDoctors()">add doctor +</button>
+</div>
+<div class="table">
+<div class="table-heading">
+    <div class="header">DoctorId</div>
+<div class="header">DoctorName</div>
+<div class="header">Specialization</div>
+<div class="header">email</div>
+<div class="header">mobileNumber</div>
+<div class="header">Fee</div>
+<div class="header">Action</div>
+</div>
+<div class="tableData" *ngFor="let doctor of doctors">
+    <div class="data">{{doctor.doctorId}}</div>
+<div class="data">{{doctor.doctorName}}</div>
+<div class="data">{{doctor.doctorSpecialization}}</div>
+<div class="data">{{doctor.doctorEmail}}</div>
+<div class="data">{{doctor.doctorMobile}}</div>
+<div class="data">{{doctor.doctorFee}}</div>
+
+<div class="data"><button class="updateBtn" (click)="updateDoctor(doctor)">Update</button></div>
+</div>
+</div>
+</div>
+
+
+<section id="main-content" *ngIf="showNewDoctor">
+    <div id="heading">
+        <h1>New doctor</h1>
+    </div>
+   <div class="main-content-info container">
+    <div class="table-data">
+        <label for="id">Doctor Id:</label><input type="text"  placeholder="doctor id" id="id" [(ngModel)]="doctorId">
+
+    </div>
+    <div class="table-data">
+        <label for="name">Doctor Name:</label><input type="text" placeholder="first name" id="name" [(ngModel)]="doctorName">
+
+    </div>
+    <div class="table-data">
+
+        <label for="address">Address:</label><input type="text" placeholder="address" id="address" [(ngModel)]="doctorAddress">
+    </div>
+    <div class="table-data">
+        <label for="email">Email:</label><input type="email"    placeholder="email" id="email" [(ngModel)]="doctorEmail">
+    </div>
+    <div class="table-data">
+        <label for="mobile">mobileNumber:</label><input type="number" placeholder="mobile number" id="mobile" [(ngModel)]="doctorMobile">
+    </div>
+    
+    <div class="table-data">
+        <label for="Fee">Fee:</label><input type="number" placeholder="Fee" id="Fee" [(ngModel)]="doctorFee">
+    </div>
+    <div class="table-data">
+        <label for="password">password:</label><input type="text" placeholder="password" id="password" [(ngModel)]="doctorPassword">
+    </div>
+    <div class="table-data">
+        <label for="specialization">specialization</label><input type="text" placeholder="specialization" id="specialization" [(ngModel)]="doctorSpecialization">
+    </div>
+   </div>
+   <div id="button">
+    <button id="submitId" (click)="addDoctor()">Submit</button>
+    <button id="cancelId" (click)="cancelDoctor()">Cancel</button>
+</div>
+</section>
+
+
+
+<div class="update-table" *ngIf="result">
+    <div id="heading">
+        <h1>Update Doctor Details</h1>
+    </div>
+    <div id="form1">
+        <div class="new-doctor-data">
+            <label for="id">doctor id:</label><input type="text" disabled="true"  [(ngModel)]="doctorId" name="id" placeholder="doctor id" id="id">
+           </div >
+       <div class="new-doctor-data">
+        <label for="Name">doctor Name:</label><input type="text"  [(ngModel)]="doctorName" name="name" placeholder="first name" id="name">
+       </div >
+       <div class="new-doctor-data">
+        <label for="address">address:</label><input type="text"  [(ngModel)]="doctorAddress" name="address"placeholder="address" id="address">
+       </div>
+       <div class="new-doctor-data">
+        <label for="email">email:</label><input type="email" disabled="true"  [(ngModel)]="doctorEmail" name="email"placeholder="Email" id="email">
+       </div>
+       <div class="new-doctor-data">
+        <label for="mobile">mobileNumber:</label><input type="number"  [(ngModel)]="doctorMobile" name="mobile" placeholder="mobile number" id="mobile">
+       </div>
+       <div class="new-doctor-data">
+        <label for="Fee">Fee:</label><input type="number"  [(ngModel)]="doctorFee" name="Fee" placeholder="Fee" id="Fee">
+       </div>
+       <div class="new-doctor-data">
+        <label for="specialization">specialization:</label><input type="text"  [(ngModel)]="doctorSpecialization" name="specialization" placeholder="specialization" id="specialization">
+       </div>
+       <div class="new-doctor-data">
+      <button (click)="ok()" class="update-btn">ok</button> <button  class="update-btn" (click)="close()">Close</button>
+       </div>
+    </div>
+</div>
+
+
+

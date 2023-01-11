@@ -1,0 +1,25 @@
+<div class="content">
+    <section id="sidebar">
+        <div class="sidebar-brand">
+            <img src="../../assets/images/profile.png" alt="">
+            <h2>Welcome {{user.name}}</h2>
+        </div>
+        <div class="sidebar-menu">
+            <ul>
+                <li id="cus-home"><a routerLink="/userDashBoard">DashBoard</a></li>
+                <li id="cus-home"><a routerLink="/myProfile">My Profile</a></li>
+                <li><a routerLink="/bookAppointment">Book Appointment </a></li>
+                <li><a routerLink="/userAppointmentHistory">My Appointments</a></li>
+                <li><a (click)="showLogOut()">Logout</a></li>
+            </ul>
+        </div>
+    </section>
+</div>
+
+<div class="logout" *ngIf="toggleLogout">
+    <h1>Are you sure that you want to Logout...?</h1>
+    <div class="button">
+        <button id="btn1" (click)="logout()"> Logout</button>
+        <button id="btn2" (click)="cancel()"> Cancel</button>
+    </div>
+</div>

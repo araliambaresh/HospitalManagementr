@@ -1,0 +1,77 @@
+<div class="doctor-heading">
+    <h1> Hospital  appointment-list</h1>
+</div>
+<div>
+    <app-admin-panel></app-admin-panel>
+</div>
+    <table  id="table" > 
+       <tr >
+           <th>Sl no</th>
+           <th>Id</th>
+           <th>Patient Name</th>
+           <th>Email</th>
+           <th>Appointment Date</th>
+           <th>Appointment Time</th>
+           <th>doctor name</th>
+           <th>Specialization</th>
+           <th>Symptoms</th>
+           <th>Status</th>
+
+           <th> Action</th>
+       </tr>
+            <tr class="table-row" *ngFor="let appointment of appointments; index as i">
+                <td>{{i+1}}</td>
+                <td>{{appointment.appointmentId}}</td>
+                <td>{{appointment.patientName}}</td>
+                <td>{{appointment.patientEmail}}</td>
+                <td>{{appointment.date}}</td>
+                <td>{{appointment.time}}</td>
+                <td>{{appointment.doctorName}}</td>
+                <td>{{appointment.doctorSpecialization}}</td>
+                <td>{{appointment.symptoms}}</td>
+                <td>{{appointment.status}}</td>
+                <td><button (click)="update(appointment)" id="update">Update</button></td>
+            </tr>
+   </table>
+
+   <!--updateAppointment function  html code-->
+   <div class="update-table" *ngIf="result">
+    <div id="heading">
+        <h1>Update Appointment Details</h1>
+    </div>
+    <div id="form1">
+       <div class="new-appointment-data">
+        <label for="id">appointment Id:</label><input type="text" disabled="true" [(ngModel)]="appointmentId" name="id" placeholder="patient id" id="id">
+       </div>
+       <div class="new-appointment-data">
+        <label for="Name">Patient Name:</label><input type="text"  [(ngModel)]="patientName" name="name" placeholder="patient name" id="name">
+       </div >
+       <div class="new-appointment-data">
+           <label for="email">email:</label><input type="email" disabled="true" [(ngModel)]="patientEmail" name="email"placeholder="Email" id="email">
+        </div>
+        <div class="new-appointment-data">
+         <label for="appointmentDate">appointmentDate:</label><input type="date" disabled [(ngModel)]="appointmentDate" name="appointmentDate"placeholder="appointmentDate" id="appointmentDate">
+        </div>
+       <div class="new-appointment-data">
+        <label for="appointmentTime">appointmentTime:</label><input type="text" disabled [(ngModel)]="appointmentTime" name="appointmentTime" placeholder="appointmentTime" id="appointmentTime">
+       </div>
+       <div class="new-appointment-data">
+        <label for="doctorName">doctorName:</label><input type="text" disabled [(ngModel)]="doctorName" name="doctorName" placeholder="doctorName" id="doctorName">
+       </div>
+       <div class="new-appointment-data">
+        <label for="description">Symptoms:</label><input type="text"   [(ngModel)]="symptoms" name="description"    placeholder="description" id="description">
+       </div>
+       <div class="new-appointment-data">
+        <label for="fee">Status:</label><select type="text" [(ngModel)]="status" name="fee" placeholder="status" id="fee">
+           <option disabled>choose</option>
+            <option value="pending">Pending</option>
+            <option value="approved">approved</option>
+            <option value="cancelled">cancelled</option>
+        </select>
+       </div>
+       <div class="new-appointment-data">
+      <button (click)="ok()" id="update-btn">ok</button> <button  id="update-btn" (click)="close()">Close</button>
+       </div>
+    </div>
+</div>
+

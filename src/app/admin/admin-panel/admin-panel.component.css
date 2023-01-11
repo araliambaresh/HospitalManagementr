@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+#btn  img{
+    border: 5px white solid;
+    width: 50px;
+    height: 60px;
+    background-color: black;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px blue;  
+}
+#sidebar{
+    width :300px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 10px;
+    background-color: rgba(244, 106, 143, 0.9);
+    position: fixed;
+    top: 25%;
+    left: 0;
+    color: #fff;
+    height: 60%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px blue;
+    overflow: hidden;
+    z-index: 10;
+}
+.sidebar-brand{
+    padding: 50px 40px;
+}
+
+.sidebar-menu ul li a{
+    display: block;
+    color: #fff;
+    padding: 10px 40px;
+    font-size: larger;
+
+}
+.sidebar-menu li{
+    transition: all 0.2s ease;
+    border-bottom: 1px rgb(36, 40, 35) solid;
+ 
+}
+.sidebar-brand img{
+    margin-left: 50px;
+    left: 20px;
+    height: 70px;
+    width:70px;
+}
+.sidebar-brand{
+    display: grid;
+   grid-template-columns: 1fr;
+   grid-row-gap: 20px;
+    /* align-items: center;
+    justify-content: center; */
+    align-content: center;
+    text-align: center;
+}
+.sidebar-menu li:hover{
+    background-color:rgba(0,0,0,0.5);
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+}
+
+
+.logout{
+    background-color: rgba(0,0,0,0.8);
+    height: auto;
+    width: 25%;
+    padding: 30px;
+    position: fixed;
+    top: 20%;
+    left: 30%;
+    z-index: 10;
+    border-radius: 5px;
+    box-shadow:10px 10px 5px black;
+}
+
+h1{
+    color: white;
+}
+
+.button{
+    margin-top: 100px;
+    margin-left: 40px;
+}
+
+#btn1{
+  height: 50px;
+  width: 40%;
+  /* padding: 5px 10px; */
+  border-radius: 5px;
+  font-size: large;
+  margin-left: 20px;
+  
+}
+
+#btn2{
+    height: 50px;
+    width: 40%;
+    border-radius: 5px;
+    font-size: large;
+    margin-left: 20px;
+  }
+
+  #btn1:hover{
+    background-color: gold;
+  }
+  #btn2:hover{
+    background-color:gold;
+  }

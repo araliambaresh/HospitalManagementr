@@ -1,0 +1,245 @@
+.doctor-list{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 30px;
+  position: relative;
+  top: 10vh;
+  width: 80vw;
+  left:18vw;
+ 
+ 
+  
+}
+.doctor-heading{
+border-bottom: solid palevioletred 3px;
+box-shadow: 5px 5px 5px 5px rgb(223, 219, 219);
+}
+.show-doctor h1{
+    margin: 0%;
+    color: blue;
+  }
+  .show-doctor{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    
+    justify-content: baseline;
+    background-color: rgb(250, 249, 252);
+    box-shadow: 5px 5px 5px 5px rgb(223, 219, 219);
+    
+
+  }
+  .show-doctor button{
+    height: 50px;
+    background-color: rgb(255, 93, 93);
+    color: white;
+    border-radius: 10px;
+    margin-left: 10px;
+    font-size: larger;
+    border: none;
+    box-shadow: 0px 0px 5px black;
+  }
+
+.table{
+  
+    display: grid;
+    grid-template-columns: 100%;
+    /* justify-content: center; */
+    align-items: center;
+    /* background-color: rgb(232, 238, 238); */
+    height: auto;
+    box-shadow: 5px 5px 5px 5px rgb(223, 219, 219);
+    word-wrap: break-word;
+    align-content: center;
+
+
+}
+.table-heading,.tableData{
+  margin-top: 10px;
+    display: grid;
+    padding: 10px;
+    grid-template-columns: 13% 13% 13% 13% 13% 13% 13% 13%;
+    grid-column-gap: 5px;
+    height: auto;
+    word-wrap: break-word;
+    align-content: center;
+    
+    
+    /* justify-content: center; */
+    /* align-items: center; */
+    
+}
+.header{
+   
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    
+    height: auto;
+    align-content: center;
+
+}
+.data{
+   
+  /* border: 2px solid black; */
+  padding-right: 10px;
+  padding-left: 3px ;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold; 
+    height: auto;
+   
+    
+}
+.updateBtn{
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    font-size: large;
+    font-weight: bolder;
+    background-color: rgb(71, 33, 240);
+    color:white;
+    border: none;
+    border-radius: 10px;
+}
+.updateBtn:hover{
+    background-color: green;
+    transition: 0.3s  ease-in-out;
+    color: white;
+    box-shadow: 5px 5px 5px black;
+    
+}
+/* new doctor panel css */
+
+#main-content{
+    
+    padding: 10px;
+    background-color:rgb(247, 245, 240);
+    width: 70vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    position: fixed;
+    left: 20%;
+    top: 20%;
+    box-shadow: 10px 10px 10px black;
+    border-radius: 10px;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    grid-gap: 30px;
+    font-size: larger;
+}
+.table-data{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.table-data input,.table-data label{
+width: 50%;
+height: 40px;
+}
+.table-data input{
+    border: none;
+    border-bottom: 2px solid blue;
+}
+
+#button{
+    margin: 5%;
+
+      
+  }
+
+  #submitId,#cancelId{
+   margin-left: 10px;
+    background-color: blue;
+    color: white;
+    font-size: large;
+    cursor: pointer;
+      height: 40px;
+      width: 45%;
+  }
+
+
+  
+  #submitId:hover,#cancelId:hover,.show-doctor button:hover{
+      background-color: blueviolet;
+      box-shadow: 5px 5px 5px black;
+  }
+  #heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    border-bottom: 3px solid rebeccapurple;
+  }
+  .new-doctor-data{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: larger;
+  }
+  .new-doctor-data input,.new-doctor-data label{
+    width: 50%;
+    border: none;
+   
+  }
+  .new-doctor-data input{
+    border-bottom: 3px solid royalblue;
+    height: 40px;
+  }
+
+  .new-doctor-data input:focus{
+    outline:none;
+  }
+  /* update table panel css */
+  
+.update-table{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 40px;
+    width: 70vw; 
+    height: 60vh;
+    position:fixed;
+     top: 20%;
+     left: 20%; 
+     z-index: 10;
+     background-color:rgb(223, 223, 224);
+     box-shadow: 10px 10px 10px rgb(226, 167, 167);
+ }
+ #form1 input,button{
+ margin-left:20px ;
+ height: 25px;
+ border-radius:5px ;
+ font-size: large;
+ }
+ #form1 button:hover{
+     background-color: blue;
+     color: white;
+ }
+ 
+#form1{
+  
+    display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-gap: 40px;
+   height: auto;
+   
+    font-size: larger;
+    font-weight: bolder;
+    padding: 10px;
+    color:black;
+    border-radius: 10px;
+  
+  
+    justify-content: center;
+    
+}
+.update-btn{
+    width: 100%;
+    height: 40px;
+      }

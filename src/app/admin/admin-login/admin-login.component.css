@@ -1,0 +1,13 @@
+.admin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: Red;
+    margin: 10vh;
+
+    
+}
+.admin h1{
+    position: relative;
+    right: 8vw;
+}

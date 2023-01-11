@@ -1,0 +1,26 @@
+
+<div>
+    <div class="form-emergency">
+        
+            <div class="inputs form-name">
+                <h1>Login</h1>
+            </div>
+            <div class="inputs">
+                <label for="email">Email*</label>
+                <input type="text" placeholder="email" [(ngModel)]="email" name="email"  id="email">
+            </div>
+
+            <div class="inputs">
+                <label for="">Password*</label>
+                <input type="password" placeholder="password" [(ngModel)]="password" id="password" >
+            </div>
+            <div class="inputs">
+                <button type="submit" (click)="login()">Submit</button>
+            </div>
+            <div class="inputs">
+                <h3>Don't have an account...? please <a (click)="changeToSignUp()">Sign in</a></h3>
+            </div>
+    
+</div>
+
+

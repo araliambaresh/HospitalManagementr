@@ -1,0 +1,97 @@
+<div>
+    <app-nav-bar></app-nav-bar>
+</div>
+
+<div>
+    <app-user-panel></app-user-panel>
+</div>
+
+<div class="appointment-container">
+<div class="appointment-heading">
+    <div class="heading-content" [class]="chooseHeading=='first'?'content':''" (click)="changeHeading('first')"> 
+        <h3>Past Appointments</h3>
+    </div>
+    <div class="heading-content" [class]="chooseHeading=='second'?'content':''" (click)="changeHeading('second')">
+
+        <h3>Today Appointments</h3>
+    </div>
+    <div class="heading-content" [class]="chooseHeading=='third'?'content':''" (click)="changeHeading('third')">
+        <h3>upcoming Appointments</h3>
+    </div>
+</div>
+<div class="appointment-content" *ngIf="chooseHeading=='second'">
+    <table  id="table" > 
+        <tr >
+            <th>Sl no</th>
+            <th>Doctor Name</th>
+            <th>Specialization</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>symptoms</th>
+            <th>Status</th>
+          
+        </tr>
+             <tr class="table-row" *ngFor="let appointment of presentAppointments; index as i">
+                 <td>{{i+1}}</td>
+                 <td>{{appointment.doctorName}}</td>
+                 <td>{{appointment.doctorSpecialization}}</td>
+                 <td>{{appointment.date}}</td>
+                 <td>{{appointment.time}}</td>
+                 <td>{{appointment.symptoms}}</td>
+                 <td [ngClass]="appointment.status=='approved'?'approve':appointment.status=='cancelled'?'cancel':'pending'">{{appointment.status}}</td>
+                 <!-- <td><button (click)="update(appointment)" id="update">Update</button></td> -->
+             </tr>
+    </table>        
+</div>
+<div class="appointment-content" *ngIf="chooseHeading=='first'">
+    <table  id="table" > 
+        <tr >
+            <th>Sl no</th>
+            <th>Doctor Name</th>
+            <th>Specialization</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>symptoms</th>
+            <th>Status</th>
+            
+        </tr>
+             <tr class="table-row" *ngFor="let appointment of pastAppointments; index as i">
+                 <td>{{i+1}}</td>
+                 <td>{{appointment.doctorName}}</td>
+                 <td>{{appointment.doctorSpecialization}}</td>
+                 <td>{{appointment.date}}</td>
+                 <td>{{appointment.time}}</td>
+                 <td>{{appointment.symptoms}}</td>
+                 <td [ngClass]="appointment.status=='approved'?'approve':appointment.status=='cancelled'?'cancel':'pending'">{{appointment.status}}</td>
+                 <!-- <td><button (click)="update(appointment)" id="update">Update</button></td> -->
+             </tr>
+    </table>        
+</div>
+
+<div class="appointment-content" *ngIf="chooseHeading=='third'">
+    <table  id="table" > 
+        <tr >
+            <th>Sl no</th>
+            <th>Doctor Name</th>
+            <th>Specialization</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>symptoms</th>
+            <th>Status</th>
+            
+        </tr>
+             <tr class="table-row" *ngFor="let appointment of futureAppointments; index as i">
+                 <td>{{i+1}}</td>
+                 <td>{{appointment.doctorName}}</td>
+                 <td>{{appointment.doctorSpecialization}}</td>
+                 <td>{{appointment.date}}</td>
+                 <td>{{appointment.time}}</td>
+                 <td>{{appointment.symptoms}}</td>
+                 <td [ngClass]="appointment.status=='approved'?'approve':appointment.status=='cancelled'?'cancel':'pending'">{{appointment.status}}</td>
+                 <!-- <td><button (click)="update(appointment)" id="update">Update</button></td> -->
+             </tr>
+    </table>        
+</div>
+
+
+</div>

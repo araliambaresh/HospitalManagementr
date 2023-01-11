@@ -1,0 +1,58 @@
+
+.inputs{
+    display: grid;
+    grid-template-columns: 1fr;
+   width: 100%;
+}
+.form-name{
+    align-items: center;
+    text-align: center;
+    color: blue;
+}
+.inputs input{
+    padding: 0%;
+    height: 30px;
+    border:none;
+    border-bottom: 2px solid red;
+}
+.inputs button{
+    height: 40px;
+    background-color: blue;
+    color: white;
+    font-size: larger;
+    border: none;
+    border-radius: 10px;
+    
+
+}
+.inputs input:focus{
+outline: none;
+}
+.inputs button:hover{
+    background-color:green;
+    transition: 0.3s ease-in-out;
+    box-shadow: 5px 5px 5px blueviolet;
+}
+.form-emergency{
+    position: fixed;
+    top: 20vh;
+    left:30vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    color: black;
+    padding: 10px;
+    width: 25vw;
+    height: 70vh;
+    background-color:#fff;
+    align-items: center;
+    font-size: large;
+    /* margin-left: 20vh; */
+    border-radius: 10px ;
+    box-shadow: 10px 10px 10px rgb(226, 219, 219);
+
+
+}
+.inputs a{
+text-decoration: none;
+color: Red;
+}

@@ -1,0 +1,35 @@
+
+.myProfile{
+   
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;
+    top: 20vh;
+    left: 30vw;
+    height: 70vh;
+    width: 50vw;
+    background-color: rgb(254, 250, 244);
+    box-shadow: 5px 5px 5px 5px  rgb(228, 215, 215);
+}
+.profile-heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.my-profile-details{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 5px;
+   
+    background-color: #fff;
+}
+.content{
+    border-bottom: 2px solid salmon;
+}
+
+
+.data{
+    display: grid;
+    grid-template-columns: 30% 60%;
+    grid-column-gap: 20px;
+}

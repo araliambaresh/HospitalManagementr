@@ -1,0 +1,44 @@
+<div class="complete-heading">
+    <div class="headings">
+        <nav class="hospital-logo">
+            <img src="../../assets/images/health-care-icon.jpg" alt="">
+            <h1>Health--Care</h1>
+        </nav>
+        <nav class="nav-bar-icon">
+           <div class="nav-bar">
+            <img src="../../assets/images/email-icon.jpg" alt="">
+            <h3>araliambaresh@gmail com</h3>
+           </div>
+           <div class="nav-bar">
+            <img src="../../assets/images/contact-icon.jpg" alt="">
+            <h3>9632230838</h3>
+           </div>
+           <div class="nav-bar">
+            <img src="../../assets/images/clock-icon.webp" alt="">
+            <h3>Daily 7:00 am to 8:00 pm</h3>
+           </div>
+        </nav></div>
+        
+    
+    <header class="nav-bar-home">
+        <nav>Menu Bar</nav>
+        <nav class="sub-nav-bar">
+            <li><a routerLink="/homePage">Home</a></li>
+            <li *ngIf="showLogin"> <a> About us </a></li>
+            <li *ngIf="showLogin==false" ><a (click)="showUserPanel()" >MyProfile</a> </li>
+            <li class="account"  *ngIf="showLogin"><a (click)="showAccount()">Account</a>
+                <ul class="drop-down" *ngIf="account">
+                    <li><a routerLink="/adminLogin"> admin </a></li>
+                    <!-- <li><a href=""> doctor </a></li> -->
+                    <li><a routerLink="/userLogin"> users</a></li>
+                </ul>
+            </li>
+            <li  *ngIf="showLogin==true"><a routerLink="/emergency"> Emergency </a></li>
+        </nav>
+    </header>
+    </div>
+
+    <div *ngIf="userPanel">
+       <app-user-panel (changeNavBarHeading)="changeNavBar()"></app-user-panel>
+    </div>
+    

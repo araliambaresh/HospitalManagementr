@@ -1,0 +1,176 @@
+.complete-heading{
+    position: fixed;
+    top: 0%;
+    width: 98vw;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+}
+.nav-bar img{
+width: 50px;
+height: 50px;
+border-radius: 30px;
+margin: 0px 10px;
+}
+.nav-bar img:hover{
+    box-shadow: 5px 5px 5px black;
+}
+.hospital-logo img{
+    height: 50px;
+    width: 50px;
+    border-radius: 30px;
+    margin: 0px 10px;
+}
+.hospital-logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: red;
+    background-color: antiquewhite;
+    width: 20vw;
+    border-radius: 1px 50px 50px 1px;
+}
+
+.headings{
+    width: 100%;
+    display: grid;
+   grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    background-color: rgb(169, 169, 235);
+    
+}
+.nav-bar-icon{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    align-items: center;
+
+}
+.nav-bar{
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;   
+}
+
+/* this is nav bar for home travel */
+.nav-bar-home{
+    width: 100%;
+    height: 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color:rgb(77, 77, 240);
+    color: white;
+    font-size:25px;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+.sub-nav-bar{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr  1fr;
+    font-size:25px;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+.sub-nav-bar li{
+    list-style: none;
+   
+}
+.sub-nav-bar li a:hover{
+    color: red;
+}
+.welcome-heading{
+    margin-top:20vh;
+    height: 80vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../assets/images/hompage-icon.jpg');
+    background-size: cover;
+
+}
+.welcome img{
+    height:15vh;
+    width: 15vw;
+    box-shadow:10px 10px 10px red;
+    border-radius: 100px;
+}
+
+
+.welcome-sub-heading{
+display: flex;
+flex-direction: column;
+align-items: center;
+
+}
+.account{
+    position: relative;
+}
+.drop-down{
+    
+    padding: 3%;
+    width: 100px;
+    height: 150px;
+    position: absolute;
+    background-color: blue;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 5px;
+    align-items: center;
+    border-radius: 5px;
+}
+.drop-down li{
+    border-bottom: 2px black solid;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.about-us{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 98vw;
+    height: 100%;
+    /* background:url('../../assets/images/hompage-icon.jpg') ; */
+    background-color: rgb(213, 235, 236);
+}
+.about-content{
+    width: auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: space-between;
+    height: auto;
+  
+}
+.about-heading{
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    width: 30vw;
+    position: relative ;
+    left: 30vw;
+    border-bottom: 3px solid red;
+
+}
+.about-heading img{
+    height: 60px;
+    width: 80%;
+    border-radius: 30px;
+    /* margin: 0px 10px; */
+}
+.about-subcontent img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px black;
+
+}
+
+
